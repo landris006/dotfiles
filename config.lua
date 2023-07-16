@@ -244,6 +244,16 @@ vim.api.nvim_create_autocmd("VimEnter", {
 	callback = open_nvim_tree,
 })
 
+local function join_lists(...)
+	local result = {}
+	for _, list in ipairs({ ... }) do
+		for _, item in ipairs(list) do
+			table.insert(result, item)
+		end
+	end
+	return result
+end
+
 local null_ls = require("null-ls")
 vim.api.nvim_create_user_command("Disable", function(opts)
 	null_ls.disable(opts.fargs[1])
