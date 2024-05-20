@@ -1,0 +1,93 @@
+* {
+  font-family: "Hack Nerd Font", "Noto Sans", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+}
+
+#workspaces {
+  background-color: #1a1b26;
+  border-radius: 100px;
+}
+
+#workspaces button {
+  color: #c0caf5;
+  border: none;
+  border-radius: 100px;
+}
+
+#workspaces button:hover {
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#workspaces button.active {
+  background-color: #5a4a78;
+}
+
+.modules-left #workspaces button:hover {
+  background: initial;
+}
+
+.modules-left #workspaces button.active:hover {
+  background-color: #5a4a78;
+}
+
+#window,
+#clock,
+#audio,
+#custom-media,
+#custom-notification,
+#network,
+#mpris,
+#tray,
+#resources,
+#power {
+  color: #c0caf5;
+  background-color: #1a1b26;
+  padding: 0 15px;
+  border-radius: 100px;
+}
+
+#window {
+  color: #c0caf5;
+}
+
+#clock {
+  color: #e0af68;
+}
+
+#mpris {
+  color: #9ece6a;
+}
+
+#network {
+  color: #93d9ce;
+}
+
+#cpu {
+  color: #97d7fc;
+}
+
+#memory {
+  color: #cc8f35;
+}
+
+#temperature {
+  color: #ed8094;
+}
+
+#pulseaudio {
+  color: #f7c8d1;
+}
+
+#pulseaudio.microphone {
+  color: #c7aef5;
+}
