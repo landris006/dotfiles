@@ -1,5 +1,5 @@
 window:
-  opacity: 0.8
+  opacity: 1
   dynamic_title: true
   decorations: none
   startup_mode: Maximized
@@ -40,7 +40,7 @@ colors:
   theme: Tokyonight_Night
 
 font:
-  size: 12.0
+  size: 14.0
   builtin_box_drawing: true
 
   normal:
