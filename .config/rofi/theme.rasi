@@ -1,27 +1,25 @@
 @import                          "colors.rasi"
 @import                          "fonts.rasi"
 
-/*****----- Main Window -----*****/
 window {
-  transparency:                "real";
+  enabled:                     true;
   location:                    center;
   anchor:                      center;
-  fullscreen:                  false;
-  width:                       400px;
+  width:                       60em;
+  height:                      30em;
   x-offset:                    0px;
   y-offset:                    0px;
-
-  enabled:                     true;
+  fullscreen:                  false;
+  cursor:                      "default";
+  transparency:                "real";
   margin:                      0px;
   padding:                     0px;
   border:                      3px solid;
   border-radius:               12px;
   border-color:                @active;
-  background-color:            @background;
-  cursor:                      "default";
+  background-image:            url("~/.config/hypr/wallpapers/city.png", width);
 }
 
-/*****----- Main Box -----*****/
 mainbox {
   enabled:                     true;
   spacing:                     0px;
@@ -31,10 +29,23 @@ mainbox {
   border-radius:               0px 0px 0px 0px;
   border-color:                @selected;
   background-color:            transparent;
+  orientation:                 horizontal;
+  children:                    [ "image", "layout" ];
+}
+
+image {
+  width:                       25em;
+  expand:                      false;
+  spacing:                     0;
+  padding:                     0;
+  background-color:            transparent;
+}
+
+layout {
+  background-color:            @background;
   children:                    [ "inputbar", "listview" ];
 }
 
-/*****----- Inputbar -----*****/
 inputbar {
   enabled:                     true;
   spacing:                     10px;
@@ -53,6 +64,7 @@ prompt {
   background-color:            inherit;
   text-color:                  inherit;
 }
+
 textbox-prompt-colon {
   enabled:                     true;
   expand:                      false;
@@ -60,6 +72,7 @@ textbox-prompt-colon {
   background-color:            inherit;
   text-color:                  inherit;
 }
+
 entry {
   enabled:                     true;
   background-color:            inherit;
@@ -69,7 +82,6 @@ entry {
   placeholder-color:           inherit;
 }
 
-/*****----- Listview -----*****/
 listview {
   enabled:                     true;
   columns:                     1;
@@ -99,7 +111,6 @@ scrollbar {
   background-color:            transparent;
 }
 
-/*****----- Elements -----*****/
 element {
   enabled:                     true;
   spacing:                     10px;
