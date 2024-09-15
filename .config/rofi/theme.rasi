@@ -5,7 +5,7 @@ window {
   enabled:                     true;
   location:                    center;
   anchor:                      center;
-  width:                       60em;
+  width:                       40em;
   height:                      30em;
   x-offset:                    0px;
   y-offset:                    0px;
@@ -17,7 +17,6 @@ window {
   border:                      3px solid;
   border-radius:               12px;
   border-color:                @active;
-  background-image:            url("~/.config/hypr/wallpapers/city.png", width);
 }
 
 mainbox {
@@ -30,7 +29,7 @@ mainbox {
   border-color:                @selected;
   background-color:            transparent;
   orientation:                 horizontal;
-  children:                    [ "image", "layout" ];
+  children:                    [ "layout" ];
 }
 
 image {
