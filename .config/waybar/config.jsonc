@@ -33,6 +33,7 @@
     "orientation": "inherit",
     "modules": [
       "cpu",
+      "custom/gpu",
       "memory",
       "temperature"
     ]
@@ -80,6 +81,14 @@
   },
   "cpu": {
     "format": "{usage}%   ",
+    "on-click": "hyprctl dispatch exec [floating] alacritty -- -e btop",
+    "interval": 5
+  },
+  "custom/gpu": {
+    "format": "{}% 󰢮 ",
+    "tooltip": false,
+    "exec-if": "which nvidia-smi",
+    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
     "on-click": "hyprctl dispatch exec [floating] alacritty -- -e btop",
     "interval": 5
   },

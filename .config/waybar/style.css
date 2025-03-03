@@ -44,6 +44,7 @@ tooltip {
 #clock,
 #audio,
 #custom-media,
+#custom-gpu,
 #custom-notification,
 #network,
 #mpris,
@@ -74,6 +75,10 @@ tooltip {
 
 #cpu {
   color: #97d7fc;
+}
+
+#custom-gpu {
+  color: #9ece6a;
 }
 
 #memory {
