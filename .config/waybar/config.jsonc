@@ -80,12 +80,12 @@
     "interval": 1
   },
   "cpu": {
-    "format": "{usage}%   ",
+    "format": "{usage}%  ",
     "on-click": "hyprctl dispatch exec [floating] alacritty -- -e btop",
     "interval": 5
   },
   "custom/gpu": {
-    "format": "{}% 󰢮 ",
+    "format": "{}% 󰢮",
     "tooltip": false,
     "exec-if": "which nvidia-smi",
     "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
