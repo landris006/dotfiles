@@ -15,9 +15,10 @@
   ],
   "modules-right": [
     "custom/notification",
-    "network",
     "group/audio",
     "group/resources",
+    "network",
+    "hyprland/language",
     "tray",
     "group/power"
   ],
@@ -40,6 +41,11 @@
   },
   "wlr/workspaces": {
     "on-click": "activate"
+  },
+  "hyprland/language": {
+    "format": " {}",
+    "format-hu": "hu",
+    "format-en": "en",
   },
   "hyprland/window": {
     "format": "{initialTitle}"
@@ -70,8 +76,8 @@
   },
   "network": {
     "format": "{ifname}",
-    "format-wifi": "{essid}  {bandwidthDownBytes}   {bandwidthUpBytes}",
-    "format-ethernet": "󰈀   {bandwidthDownBytes}  {bandwidthUpBytes}",
+    "format-wifi": "{essid}",
+    "format-ethernet": "󰈀",
     "format-disconnected": "", //An empty format will hide the module.
     "tooltip-format": "{ipaddr}  {bandwidthDownBytes}  {bandwidthUpBytes}",
     "format-linked": " {ifname} (No IP)",
@@ -93,8 +99,7 @@
     "interval": 5
   },
   "memory": {
-    "format": "{used:0.1f}/{total:0.1f} GB   ",
-    // "tooltip-format": "{}%",
+    "format": "{used:0.1f} GB   ",
     "tooltip-format": "{used:0.1f}GB/{total:0.1f}GB",
     "on-click": "hyprctl dispatch exec [floating] alacritty -- -e btop",
     "interval": 5
