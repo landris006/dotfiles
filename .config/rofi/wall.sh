@@ -20,17 +20,31 @@ for image_path in "$wallpaper_dir"/*.{jpg,jpeg,png,webp}; do
 done
 
 # Select a picture with rofi
+file_list=$(find "${wallpaper_dir}" -maxdepth 1  -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) -exec basename {} \;)
 wall_selection=$(
-  find "${wallpaper_dir}" -maxdepth 1  -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) -exec basename {} \; \
+  printf "%s\n" "${file_list}" \
   | sort \
-  | while read -r A; do \
-      echo -en "$A\x00icon\x1f""${cache_dir}"/"$A\n"; \
-    done \
+  | {
+    while read -r A;
+    do \
+      echo -en "$A\x00icon\x1f""${cache_dir}"/"$A\n"
+    done
+    echo "random"
+  } \
   | $rofi_command
 )
 
 # Set the wallpaper
 [[ -n "$wall_selection" ]] || exit 1
+
+if [[ "$wall_selection" == "random" ]]; then
+  wall_selection=$(
+    printf "%s\n" "${file_list}" \
+    | sort -R \
+    | head -n 1
+  )
+fi
+
 swww img \
   "${wallpaper_dir}/${wall_selection}" \
   --transition-fps 165 \
