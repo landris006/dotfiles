@@ -78,10 +78,14 @@ configuration {
     delay:  0;
   }
 
+  hover-select:				 true;
+  me-select-entry:			 "";
+  me-accept-entry:			 "MousePrimary";
+
   kb-accept-entry: "Return,KP_Enter,Control+l";
   kb-remove-to-eol: "Control+U";
   kb-remove-to-sol: "Control+u";
   kb-mode-complete: "Control+m";
-  kb-row-up: "Control+k";
-  kb-row-down: "Control+j";
+  kb-row-up: "Control+k,Up";
+  kb-row-down: "Control+j,Down";
 }
