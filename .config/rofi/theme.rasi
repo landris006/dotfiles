@@ -5,7 +5,7 @@ window {
   enabled:                     true;
   location:                    center;
   anchor:                      center;
-  width:                       40em;
+  width:                       calc(40em/*  + 25em */);
   height:                      30em;
   x-offset:                    0px;
   y-offset:                    0px;
@@ -15,9 +15,9 @@ window {
   margin:                      0px;
   padding:                     0px;
   border:                      1px solid;
+  border-color:                @active;
   border-radius:               12px;
   background-color:            transparent;
-  border-color:                @active;
 }
 
 mainbox {
@@ -38,7 +38,9 @@ image {
   expand:                      false;
   spacing:                     0;
   padding:                     0;
-  background-color:            transparent;
+  background-image:             url("~/Pictures/Wallpapers/city.png", height);
+  background-color:            @background;
+  // background-color:            transparent;
 }
 
 layout {
@@ -51,10 +53,10 @@ inputbar {
   spacing:                     10px;
   margin:                      0px;
   padding:                     15px;
-  border:                      0 0 2px 0 solid;
+  border:                      0 0 1px 0 solid;
   border-radius:               0px;
   border-color:                @active;
-  background-color:            @background;
+  background-color:            transparent;
   text-color:                  @foreground;
   children:                    [ "prompt", "entry" ];
 }
@@ -117,19 +119,22 @@ element {
   margin:                      0px;
   padding:                     8px;
   border:                      0px solid;
-  border-radius:               0px;
+  border-radius:               0 12px 12px 0;
   border-color:                @selected;
   background-color:            transparent;
   text-color:                  @foreground;
   cursor:                      pointer;
 }
 element normal.normal {
-  background-color:            @background;
+  background-color:            transparent;
   text-color:                  @foreground;
 }
 element selected.normal {
   background-color:            @background-alt;
   text-color:                  @foreground;
+
+  border:                      1px solid;
+  border-color:                @active;
 }
 element-icon {
   background-color:            transparent;
