@@ -2,6 +2,7 @@
   font-family: "Hack Nerd Font", "Noto Sans", sans-serif;
   font-size: 14px;
   font-weight: bold;
+  min-height: 0;
 }
 
 window#waybar {
@@ -14,13 +15,13 @@ tooltip {
 
 #workspaces {
   background-color: #1a1b26;
-  border-radius: 100px;
+  border-radius: 10px;
 }
 
 #workspaces button {
   color: #c0caf5;
   border: none;
-  border-radius: 100px;
+  border-radius: 10px;
 }
 
 #workspaces button:hover {
@@ -54,8 +55,8 @@ tooltip {
 #power {
   color: #c0caf5;
   background-color: #1a1b26;
-  padding: 0 15px;
-  border-radius: 100px;
+  padding: 0 10px;
+  border-radius: 10px;
 }
 
 #window {
