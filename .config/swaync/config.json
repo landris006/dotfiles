@@ -31,14 +31,12 @@
     "inhibitors",
     "title",
     "dnd",
-    "volume",
-    "mpris",
     "notifications"
   ],
-  "volume": {
-    "label": ""
-  },
   "widget-config": {
+    "volume": {
+      "label": ""
+    },
     "inhibitors": {
       "text": "Inhibitors",
       "button-text": "Clear All",
