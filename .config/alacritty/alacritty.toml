@@ -5,6 +5,7 @@ TERM = "xterm-256color"
 decorations = "none"
 dynamic_title = true
 startup_mode = "Windowed"
+padding = { x = 16, y = 16 }
 
 [[colors.indexed_colors]]
 color = "0xff9e64"
