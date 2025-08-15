@@ -45,10 +45,12 @@ if [[ "$wall_selection" == "random" ]]; then
   )
 fi
 
+wallpaper_path="${wallpaper_dir}/${wall_selection}"
 swww img \
-  "${wallpaper_dir}/${wall_selection}" \
+  "${wallpaper_path}" \
   --transition-fps 165 \
   --transition-type grow \
-  --transition-pos 0.8,0.9
+  --transition-pos 0.8,0.9 && \
+  echo "${wallpaper_path}" > "${HOME}/.cache/current-wallpaper"
 
 exit 0
